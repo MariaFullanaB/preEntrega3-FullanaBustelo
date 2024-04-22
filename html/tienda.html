@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paraíso Felino - Tienda</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="#">
+                    <img src="recursos/paraiso.felino.png" alt="Logo de Paraíso Felino" class="logo">
+                </a>
+                <ul class="navbar-nav">
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="guarderia.html" class="nav-link">Guardería</a></li>
+                    <li><a href="cuidadosencasa.html" class="nav-link">Cuidados en casa</a></li>
+                    <li><a href="equipo.html" class="nav-link">Equipo</a></li>
+                    <li><a href="trabajaconnosotros.html" class="nav-link">Trabaja con nosotros</a></li>
+                    <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                </ul>
+                <div class="carrito-icon" onclick="mostrarCarrito()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="carrito-counter" id="carrito-counter">0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="tienda-section">
+        <div class="container">
+            <h2 class="titulo-seccion">Tienda de Juguetes para Gatos</h2>
+            <div class="row">
+                <div class="card">
+                    <img src="recursos/juguete1.jpg" alt="Juguete 1" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Juguete de Plumas</h5>
+                        <p class="card-text">Juguete interactivo con plumas naturales para horas de diversión.</p>
+                        <button class="btn" onclick="agregarAlCarrito('Juguete de Plumas', 12.99)">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="recursos/juguete2.jpg" alt="Juguete 2" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Pelota Brillante</h5>
+                        <p class="card-text">Pelota con luces intermitentes que atraerán la atención de tu gato.</p>
+                        <button class="btn" onclick="agregarAlCarrito('Pelota Brillante', 8.99)">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="recursos/juguete3.jpg" alt="Juguete 3" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Túnel de Juego</h5>
+                        <p class="card-text">Túnel plegable con juguete de bola para exploración y diversión.</p>
+                        <button class="btn" onclick="agregarAlCarrito('Túnel de Juego', 19.99)">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="recursos/juguete4.jpg" alt="Juguete 4" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Torre de Rascado</h5>
+                        <p class="card-text">Torre de rascado de varios niveles con juguetes colgantes.</p>
+                        <button class="btn" onclick="agregarAlCarrito('Torre de Rascado', 29.99)">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <a href="https://www.instagram.com/lacasadepipo/" target="_blank">Instagram</a>
+            <a href="https://www.facebook.com/maria.fullana.1/" target="_blank">Facebook</a>
+            <h2>Paraíso Felino - Todos los derechos reservados</h2>
+        </div>
+    </footer>
+
+    <div class="mensaje" id="mensaje"></div>
+
+    <div class="carrito-popup" id="carrito-popup">
+        <div class="carrito-content">
+            <span class="close" onclick="cerrarCarrito()">&times;</span>
+            <h3>Carrito de Compras</h3>
+            <ul id="carrito-lista"></ul>
+            <div class="carrito-total">
+                Total: <span id="carrito-total">$0.00</span>
+            </div>
+            <button class="btn-finalizar" onclick="finalizarCompra()">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

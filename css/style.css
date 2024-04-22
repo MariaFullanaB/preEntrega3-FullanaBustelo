@@ -1,0 +1,285 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(236, 232, 228);
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #fff;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    width: 150px;
+}
+
+.navbar ul.navbar-nav {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.navbar ul.navbar-nav li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Tienda Section */
+.tienda-section {
+    padding: 50px 0;
+}
+
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Centrar las cards */
+}
+
+.card {
+    width: 300px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.card-price {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.btn {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background-color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 50px;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer h2 {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Carrito Popup */
+.carrito-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    overflow: auto;
+}
+
+.carrito-content {
+    background-color: #fff;
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.carrito-content .close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.carrito-lista {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.carrito-lista li {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+
+.carrito-lista li:last-child {
+    border-bottom: none;
+}
+
+.carrito-total {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.btn-finalizar {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+}
+
+.btn-finalizar:hover {
+    background-color: #218838;
+}
+
+/* Mensaje */
+.mensaje {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    max-width: 80%;
+    text-align: center;
+    display: none;
+}
+
+/* Carrito Icon */
+.carrito-icon {
+    position: fixed;
+    font-size: 1.5rem;
+    color: black;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carrito-counter {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #ffd700;
+    color: black;
+    font-size: 0.8rem;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+@media screen and (min-width: 768px) {
+    .card {
+        width: calc(25% - 20px);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .navbar ul.navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul.navbar-nav li {
+        margin-top: 10px;
+    }
+
+    .carrito-icon {
+        top: 10px;
+        right: 10px;
+    }
+
+    .carrito-counter {
+        top: -8px;
+        right: -8px;
+        font-size: 0.7rem;
+    }
+
+    .carrito-popup {
+        width: 100%;
+        height: 100%;
+    }
+
+    .carrito-content {
+        width: 90%;
+        margin: 20px auto;
+    }
+}
