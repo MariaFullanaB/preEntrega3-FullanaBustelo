@@ -94,13 +94,6 @@ body {
     margin-bottom: 10px;
 }
 
-.card-price {
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #007bff;
-}
-
 .btn {
     width: 100%;
     background-color: #007bff;
@@ -135,7 +128,7 @@ footer h2 {
     margin-top: 10px;
 }
 
-/* Carrito */
+/* Carrito Popup */
 .carrito-popup {
     display: none;
     position: fixed;
@@ -199,6 +192,21 @@ footer h2 {
 
 .btn-finalizar:hover {
     background-color: #218838;
+}
+
+.btn-vaciar {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+}
+
+.btn-vaciar:hover {
+    background-color: #c82333;
 }
 
 /* Mensaje */
